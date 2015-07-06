@@ -1492,17 +1492,30 @@ $include-html-global-classes: $include-html-classes;
     margin-top:    rem-calc(20);
     margin-bottom: rem-calc(20);
 }
-.how_it_works {
-    h3 {
-        color: $primary-color;
-    }
+h3 {
+    color: $primary-color;
+}
+.feedback {
+    margin-bottom: rem-calc(20);
+}
+.community {
+    margin-bottom: rem-calc(40);
 }
 .greeting {
-    h3, i {
-        color: $primary-color;
-    }
     i {
+        color: $primary-color;
         line-height: rem-calc(30);
         font-size: rem-calc(70);
+    }
+}
+footer {
+    margin-top: rem-calc(40);
+    background-color: $topbar-bg-color;
+    color: $white;
+    padding: rem-calc(24) 0px rem-calc(10);
+    li {
+        font-size: rem-calc(12);
+        font-weight: bold;
+        color: #666;
     }
 }
