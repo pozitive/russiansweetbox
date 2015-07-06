@@ -31,6 +31,7 @@ gem 'pg'
 gem 'puma'
 gem 'rails_12factor', group: :production
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'slim'
 

@@ -1486,8 +1486,23 @@ $include-html-global-classes: $include-html-classes;
 // $include-legacy-visibility-classes: true;
 
 @import 'foundation';
+@import 'foundation-icons';
 
 .box img {
     margin-top:    rem-calc(20);
     margin-bottom: rem-calc(20);
+}
+.how_it_works {
+    h3 {
+        color: $primary-color;
+    }
+}
+.greeting {
+    h3, i {
+        color: $primary-color;
+    }
+    i {
+        line-height: rem-calc(30);
+        font-size: rem-calc(70);
+    }
 }
