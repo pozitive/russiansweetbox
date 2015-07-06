@@ -34,8 +34,7 @@ gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'slim'
-
-
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
