@@ -32,6 +32,7 @@ gem 'puma'
 gem 'rails_12factor', group: :production
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
+gem 'foundation_rails_helper'
 gem 'therubyracer', platforms: :ruby
 gem 'slim'
 gem 'stripe'

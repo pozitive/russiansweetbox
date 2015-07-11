@@ -10,9 +10,7 @@ html lang="en"
     = csrf_meta_tags
   body
     == render "layouts/topbar"
-    .flash
-      p.notice = notice
-      p.alert  = alert
+    = display_flash_messages
     .row
       .columns
         == yield
