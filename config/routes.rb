@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :subscriptions
+
   devise_for :users
+  resources :subscriptions, except: :edit
   root 'welcome#index'
 
 end

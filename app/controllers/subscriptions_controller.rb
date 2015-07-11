@@ -1,4 +1,5 @@
 class SubscriptionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_subscription, only: [:show, :edit, :update, :destroy]
 
   # GET /subscriptions
@@ -15,10 +16,6 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/new
   def new
     @subscription = Subscription.new
-  end
-
-  # GET /subscriptions/1/edit
-  def edit
   end
 
   # POST /subscriptions
