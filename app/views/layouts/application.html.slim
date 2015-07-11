@@ -13,5 +13,7 @@ html lang="en"
     .flash
       p.notice = notice
       p.alert  = alert
-    == yield
+    .row
+      .columns
+        == yield
     == render "layouts/footer"
