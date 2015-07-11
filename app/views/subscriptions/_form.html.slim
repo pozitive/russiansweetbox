@@ -1,4 +1,4 @@
-= form_for(@subscription) do |f|
+.form*{'data-abide' => ''} = form_for(@subscription) do |f|
   - if @subscription.errors.any?
     .alert-box data-alert=''
       p= "#{pluralize(@subscription.errors.count, 'error')} prohibited this subscription from being saved"
@@ -11,22 +11,22 @@
   h3 Shipping Address
   .row
     .columns.large-6
-      = f.text_field :first_name
+      = f.text_field :first_name, required: ''
     .columns.large-6
-      = f.text_field :last_name
+      = f.text_field :last_name, required: ''
   .row
     .columns.large-8
-      = f.text_field :street_address
+      = f.text_field :street_address, required: ''
     .columns.large-4
       = f.text_field :unit
   .row
     .columns.large-8
-      = f.text_field :city
+      = f.text_field :city, required: ''
     .columns.large-4
       = f.text_field :state
   .row
     .columns.large-8
-      = f.text_field :country
+      = f.text_field :country, required: ''
     .columns.large-4
       = f.text_field :postal_code
   = f.hidden_field :user_id, value: current_user.try(:id)

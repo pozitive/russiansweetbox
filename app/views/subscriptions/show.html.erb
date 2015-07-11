@@ -41,9 +41,7 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @subscription.user %>
+  <strong>Email:</strong>
+  <%= @subscription.user.try(:email) %>
 </p>
 
-<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
-<%= link_to 'Back', subscriptions_path %>

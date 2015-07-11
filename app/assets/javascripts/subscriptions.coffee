@@ -23,7 +23,7 @@ subscription =
   handleStripeResponse: (status, response) ->
     if status == 200
       $('#subscription_stripe_card_token').val(response.id)
-      # $('#new_subscription')[0].submit()
+      $('#new_subscription')[0].submit()
     else
       $('#stripe_error').text(response.error.message).addClass('label alert')
       $('input[type=submit]').attr('disabled', false)
