@@ -24,7 +24,7 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(subscription_params)
 
     respond_to do |format|
-      if @subscription.save
+      if @subscription.save_with_payment
         format.html { redirect_to @subscription, notice: 'Subscription was successfully created.' }
         format.json { render :show, status: :created, location: @subscription }
       else
