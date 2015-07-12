@@ -1,0 +1,24 @@
+h1 Your Subscription Information
+.panel
+  .row
+    .columns.large-12
+      ul.no-bullet
+        li= "First name: #{@subscription.first_name}" 
+        li= "Last name: #{@subscription.last_name}"
+        li= "Email: #{@subscription.user.try(:email)}"
+        li= "Street address: #{@subscription.street_address}"
+        li= "Unit: #{@subscription.unit}"
+        li= "City: #{@subscription.city}"
+        - if @subscription.state?
+          li= "State/Province: #{@subscription.state}" 
+        li= "Country: #{@subscription.country}"
+        - if @subscription.postal_code?
+          li= "Postal code: #{@subscription.postal_code}"
+  hr
+  .row
+    .columns.large-12
+      ul.no-bullet
+        li If you have any questions feel free to contact us by email or call us
+        li Tel.: (+7) 9164087333 Dima
+        li Tel.: (+7) 9152632582 Alla
+        li Email: dima@russiancrate.com, alla@russiancrate.com 
