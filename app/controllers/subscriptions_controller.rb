@@ -4,9 +4,9 @@ class SubscriptionsController < ApplicationController
 
   # GET /subscriptions
   # GET /subscriptions.json
-  def index
-    @subscriptions = Subscription.all
-  end
+  # def index
+  #   @subscriptions = Subscription.all
+  # end
 
   # GET /subscriptions/1
   # GET /subscriptions/1.json
@@ -36,27 +36,27 @@ class SubscriptionsController < ApplicationController
 
   # PATCH/PUT /subscriptions/1
   # PATCH/PUT /subscriptions/1.json
-  def update
-    respond_to do |format|
-      if @subscription.update(subscription_params)
-        format.html { redirect_to @subscription, notice: 'Subscription was successfully updated.' }
-        format.json { render :show, status: :ok, location: @subscription }
-      else
-        format.html { render :edit }
-        format.json { render json: @subscription.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @subscription.update(subscription_params)
+  #       format.html { redirect_to @subscription, notice: 'Subscription was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @subscription }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @subscription.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /subscriptions/1
   # DELETE /subscriptions/1.json
-  def destroy
-    @subscription.destroy
-    respond_to do |format|
-      format.html { redirect_to subscriptions_url, notice: 'Subscription was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @subscription.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to subscriptions_url, notice: 'Subscription was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
