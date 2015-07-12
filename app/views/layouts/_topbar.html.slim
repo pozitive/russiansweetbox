@@ -5,11 +5,12 @@ nav.top-bar data-topbar="" role="navigation"
   section.top-bar-section
     ul.right
       - if user_signed_in?
+        - if current_user.subscriptions.any?
+          li= link_to "Your Subscription", user_subscription_path(current_user)
+        li.divider
         li.has-form
           = link_to "Logout", destroy_user_session_path, method: :delete, class: "button"
       - else
-        li
-          = link_to "Sign up", new_user_registration_path
+        li= link_to "Sign up", new_user_registration_path
         li.divider
-        li
-          = link_to "Login", new_user_session_path
+        li= link_to "Login", new_user_session_path
