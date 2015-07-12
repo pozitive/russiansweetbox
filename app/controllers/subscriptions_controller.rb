@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_subscription, only: [:show, :edit, :update, :destroy]
+  before_filter :auth_user
 
   # GET /subscriptions
   # GET /subscriptions.json
@@ -68,4 +68,9 @@ class SubscriptionsController < ApplicationController
     def subscription_params
       params.require(:subscription).permit(:first_name, :last_name, :street_address, :unit, :city, :state, :country, :postal_code, :user_id, :stripe_card_token)
     end
+
+    def auth_user
+      redirect_to new_user_registration_url unless user_signed_in?
+    end
+
 end
